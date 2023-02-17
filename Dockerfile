@@ -1,4 +1,4 @@
-FROM stashapp/stash:v0.18.0 as stash
+FROM stashapp/stash:v0.19.0 as stash
 
 FROM python:3.11
 COPY --from=stash /usr/bin/stash /usr/bin/stash
