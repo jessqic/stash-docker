@@ -15,3 +15,8 @@ ENV STASH_CONFIG_FILE=/config/config.yml
 ENV STASH_GENERATED=/generated/
 ENV STASH_METADATA=/metadata/
 ENV STASH_CACHE=/cache/
+
+RUN python -m venv /venv
+ENV PATH=/venv/bin:$PATH
+
+CMD ["stash"]
