@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 FROM stashapp/stash:v0.19.0 as stash
 
 FROM python:3.11
