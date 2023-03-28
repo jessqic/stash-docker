@@ -20,6 +20,6 @@ RUN python -m venv /venv
 ENV PATH=/venv/bin:$PATH
 RUN --mount=type=cache,target=/root/.cache/pip \
   pip install --upgrade pip && \
-  pip install bs4 cloudscraper lxml pystashlib
+  pip install bs4 cloudscraper lxml pystashlib orjson
 
 CMD ["stash"]
