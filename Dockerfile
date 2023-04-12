@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM stashapp/stash:v0.20.1 as stash
+FROM stashapp/stash:v0.20.2 as stash
 
 FROM python:3.11
 COPY --from=stash /usr/bin/stash /usr/bin/stash
