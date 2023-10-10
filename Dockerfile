@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM stashapp/stash:v0.22.1 as stash
 
-FROM python:3.11
+FROM python:3.12
 COPY --from=stash /usr/bin/stash /usr/bin/stash
 
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
