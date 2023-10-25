@@ -69,7 +69,6 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=registry,oci-mediatypes=true,compression=zstd,force-compression=true
           cache-from: type=registry,ref=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:buildcache
           cache-to: type=registry,ref=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:buildcache,mode=max,compression=zstd
 
